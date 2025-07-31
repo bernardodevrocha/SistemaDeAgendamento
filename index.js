@@ -47,9 +47,29 @@ app.get("/event/:id", async (req, res) => {
   var appointment = await AppointmentService.GetById(req.params.id);
   console.log(appointment);
   res.render('event', {appo: appointment});
+});
+
+app.post("/finish", async (req, res) => {
+  var id = req.body.id;
+  var result = await AppointmentService.finishedAppointment(id);
+
+  res.redirect("/");
+})
+
+app.get("/list", async (req, res) => {
+  // await AppointmentService.search("partner1@user.com");
+
+  var appos = await AppointmentService.GetAll(true);
+  res.render("list", {appos});
+})
+
+app.get("/searchresult", async (req, res) => {
+  // body -> Usado em post | query -> Usado em get
+  var result = await AppointmentService.search(req.query.search)
+  res.render("list", {result});
 })
 
 app.listen(8080, () => {
   console.log("Servidor rodando na porta 8080");
   console.log("http://localhost:8080");
-})
+});
