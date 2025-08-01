@@ -69,7 +69,7 @@ app.get("/searchresult", async (req, res) => {
   res.render("list", {result});
 })
 
-var pollTime = 6000;
+var pollTime = 3600000;
 
 setInterval(async () => {
   await AppointmentService.SendNotification();

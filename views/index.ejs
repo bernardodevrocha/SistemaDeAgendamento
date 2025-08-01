@@ -7,7 +7,29 @@
   <link rel="stylesheet" href="style.css">
   <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.18/index.global.min.js'></script>
 </head>
+<style>
+  .ul{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  a{
+    text-decoration: none;
+
+  }
+  li{
+    list-style-type: none;
+  }
+</style>
 <body>
+    <div class="header">
+      <ul>
+        <a href="/"><li>Calendário</li></a>
+        <a href="/cadastro"><li>Cadastrar Paciente</li></a>
+        <a href="/list"><li>Consultas</li></a>
+      </ul>
+    </div>
+
     <div id="calendar">
 
     </div>

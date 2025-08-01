@@ -6,7 +6,29 @@
   <title>Cadastro</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
 </head>
+<style>
+  .ul{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+  }
+  a{
+    text-decoration: none;
+
+  }
+  li{
+    list-style-type: none;
+  }
+</style>
 <body>
+
+  <div class="header">
+      <ul>
+        <a href="/"><li>Calendário</li></a>
+        <a href="/cadastro"><li>Cadastrar Paciente</li></a>
+        <a href="/list"><li>Consultas</li></a>
+      </ul>
+    </div>
   <h1>Cadastro de consulta</h1> <hr>
   <form action="create" method="POST">
     <input type="text" name="name" id="name" placeholder="Nome do paciente" class="form-control">

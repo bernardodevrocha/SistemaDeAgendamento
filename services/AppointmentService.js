@@ -82,12 +82,12 @@ class AppointmentService{
         var date = app.start.getTime();
         var hour = 1000 * 60 * 60;
         var gap = date-Date.now();
+        
 
         if(gap <= hour){
           console.log(app.title)
           console.log("Mandando a Notificação!");
         }
-
       })
     }
 }
